@@ -3,8 +3,10 @@
 Script ot create pascals triangle with arrays
 """
 from typing import List
-def pascal_triangle(n:int) -> List[int]:
-"""Function to calculate and display pascals triangle"""
+
+
+def pascal_triangle(n: int) -> List[int]:
+    """Function to calculate and display pascals triangle"""
     res = [[1]]
     for i in range(n - 1):
         temp = [0] + res[-1] + [0]
@@ -12,3 +14,4 @@ def pascal_triangle(n:int) -> List[int]:
         for j in range(len(res[-1]) + 1):
             row.append(temp[j] + temp[j + 1])
         res.append(row)
+    return res
