@@ -2,10 +2,9 @@
 """
 Script ot create pascals triangle with arrays
 """
-from typing import List
 
 
-def pascal_triangle(n: int) -> List[int]:
+def pascal_triangle(n: int):
     """Function to calculate and display pascals triangle"""
     if (n <= 0 ):
         return []
