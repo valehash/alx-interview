@@ -37,12 +37,16 @@ def isWinner(x:int, nums)->str:
     maria_wins = 0
     ben_wins = 0
 
-    for n in nums:
+    for i, n in enumerate(nums):
         winner = play_game(n)
         if winner == 0:
             maria_wins += 1
+            print(f"Round {i+1} (n={n}): Maria wins")
         else:
             ben_wins += 1
+            print(f"Round {i+1} (n={n}): Ben wins")
+
+    print(f"Final score - Maria: {maria_wins}, Ben: {ben_wins}")
 
     if maria_wins > ben_wins:
         return "Maria"
@@ -50,3 +54,4 @@ def isWinner(x:int, nums)->str:
         return "Ben"
     else:
         return None
+
