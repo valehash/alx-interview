@@ -32,26 +32,19 @@ def play_game(n:int)->int:
 
     return 1 - current_player  # This line should never be reached, but just in case
 
-def isWinner(x, nums):
+def isWinner(x:int, nums)->str:
     """defines which player won the game"""
     maria_wins = 0
     ben_wins = 0
-
-    for i, n in enumerate(nums):
+    for n in nums:
         winner = play_game(n)
         if winner == 0:
             maria_wins += 1
-            print(f"Round {i+1} (n={n}): Maria wins")
         else:
             ben_wins += 1
-            print(f"Round {i+1} (n={n}): Ben wins")
-
-    print(f"Final score - Maria: {maria_wins}, Ben: {ben_wins}")
-
     if maria_wins > ben_wins:
         return "Maria"
     elif ben_wins > maria_wins:
         return "Ben"
     else:
         return None
-
