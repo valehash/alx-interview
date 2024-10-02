@@ -32,7 +32,7 @@ def play_game(n:int)->int:
 
     return 1 - current_player  # This line should never be reached, but just in case
 
-def isWinner(x:int, nums)->str:
+def isWinner(x: nums):
     """defines which player won the game"""
     maria_wins = 0
     ben_wins = 0
